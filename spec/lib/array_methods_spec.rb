@@ -82,3 +82,26 @@ describe "#rotate" do
     end
   end
 end
+
+describe "#contains_duplicate" do 
+  describe "Example 1" do
+    it "tells if the array contains any duplicates" do 
+      array = [1,2,3,1]
+      expect(contains_duplicate(array)).to eq(true)
+    end
+  end
+
+  describe "Example 2" do
+    it "tells if the array contains any duplicates" do 
+      array = [1,2,3,4]
+      expect(contains_duplicate(array)).to eq(false)
+    end
+  end
+
+  describe "Example 3" do
+    it "tells if the array contains any duplicates" do 
+      array = [1,1,1,3,3,4,3,2,4,2]
+      expect(contains_duplicate(array)).to eq(true)
+    end
+  end
+end
