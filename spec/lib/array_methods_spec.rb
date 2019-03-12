@@ -52,3 +52,33 @@ describe "#max_profit" do
     end
   end
 end
+
+describe "#rotate" do 
+  describe "Example 1" do
+    it "rotates the array to the right by 1 step" do 
+      array = [1,2,3,4,5,6,7]
+      expect(rotate(array,1)).to eq([7,1,2,3,4,5,6])
+    end
+
+    it "rotates the array to the right by 2 steps" do 
+      array = [1,2,3,4,5,6,7]
+      expect(rotate(array,2)).to eq([6,7,1,2,3,4,5])
+    end
+
+    it "rotates the array to the right by 3 steps" do 
+      array = [1,2,3,4,5,6,7]
+      expect(rotate(array,3)).to eq([5,6,7,1,2,3,4])
+    end
+  end
+  describe "Example 2" do
+    it "rotates the array to the right by 1 step" do 
+      array = [-1,-100,3,99]
+      expect(rotate(array,1)).to eq([99,-1,-100,3])
+    end
+
+    it "rotates the array to the right by 2 steps" do 
+      array = [-1,-100,3,99]
+      expect(rotate(array,2)).to eq([3,99,-1,-100])
+    end
+  end
+end
