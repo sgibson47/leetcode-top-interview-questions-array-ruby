@@ -121,3 +121,20 @@ describe "#single_number" do
     end
   end
 end
+
+describe "#intersect" do 
+  describe "Example 1" do
+    it "returns the bit shared by both arrays" do 
+      nums1 = [1,2,2,1], nums2 = [2,2]
+      expect(intersect(nums1, nums2)).to eq([2,2])
+    end
+  end
+
+  describe "Example 2" do
+    it "returns the bit shared by both arrays" do 
+      nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+      expect(intersect(nums1, nums2)).to eq([4,9])
+    end
+  end
+  
+end
