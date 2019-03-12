@@ -105,3 +105,19 @@ describe "#contains_duplicate" do
     end
   end
 end
+
+describe "#single_number" do 
+  describe "Example 1" do
+    it "returns the number that appears once" do 
+      array = [2,2,1]
+      expect(contains_duplicate(array)).to eq(1)
+    end
+  end
+
+  describe "Example 2" do
+    it "returns the number that appears once" do 
+      array = [4,1,2,1,2]
+      expect(contains_duplicate(array)).to eq(4)
+    end
+  end
+end
