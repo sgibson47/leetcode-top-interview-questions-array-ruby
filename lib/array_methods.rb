@@ -1,3 +1,5 @@
+require 'pry'
+
 def remove_duplicates(nums)
   nums.uniq!
 
@@ -62,4 +64,21 @@ def contains_duplicate(nums)
   else
     return false
   end
+end
+
+def single_number(nums)
+  i = 0
+  while i <nums.length do
+    new_nums = nums[0,i].concat(nums[i+1,nums.length-1])
+    if !new_nums.include?(nums[i]) 
+      return nums[i] 
+    end
+    i += 1
+  end
+
+  # These also work, but I'm not sure how the XOR works with reduce to do it
+  # nums.reduce(:^)
+  # nums.inject(0) { |a, b| a^b }
+  # nums.reduce(0) { |a, b| a^b }
+  # nums.reduce { |a, b| a^b }
 end
