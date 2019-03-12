@@ -53,3 +53,13 @@ def rotate(nums, k)
   #return the altered array
   nums
 end
+
+def contains_duplicate(nums)
+  #compare the length of the orig array
+  #with the length of an array of unique elements from the original
+  if nums.length != nums.uniq.length
+    return true
+  else
+    return false
+  end
+end
