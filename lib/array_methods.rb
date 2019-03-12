@@ -41,3 +41,15 @@ def max_profit(prices)
   #return profit
   profit
 end
+
+def rotate(nums, k)
+  #however many rotations called for
+  k.times do
+    #take the last element out of the array
+    elem = nums.pop
+    # add it to the begining of the array
+    nums.unshift(elem)
+  end
+  #return the altered array
+  nums
+end
