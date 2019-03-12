@@ -82,3 +82,6 @@ def single_number(nums)
   # nums.reduce(0) { |a, b| a^b }
   # nums.reduce { |a, b| a^b }
 end
+
+
+
