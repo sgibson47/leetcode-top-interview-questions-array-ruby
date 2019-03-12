@@ -29,3 +29,26 @@ describe "#remove_duplicates" do
     end
   end
 end
+
+describe "#max_profit" do 
+  describe "Example 1" do
+    it "returns the max profit" do 
+      array = [7,1,5,3,6,4]
+      expect(max_profit(array)).to eq(7)
+    end
+  end
+
+  describe "Example 2" do
+    it "returns the max profit" do 
+      array = [1,2,3,4,5]
+      expect(max_profit(array)).to eq(4)
+    end
+  end
+
+  describe "Example 3" do
+    it "returns the max profit" do 
+      array = [7,6,4,3,1]
+      expect(max_profit(array)).to eq(0)
+    end
+  end
+end
