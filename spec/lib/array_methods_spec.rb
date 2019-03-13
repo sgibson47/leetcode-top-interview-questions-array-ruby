@@ -155,3 +155,12 @@ describe "#plus_one" do
     end
   end
 end
+
+describe "#move_zeroes" do 
+  describe "Example 1" do
+    it "moves zeroes to the end of the array" do 
+      nums = [0,1,0,3,12]
+      expect(move_zeroes(nums)).to eq([1,3,12,0,0])
+    end
+  end
+end
