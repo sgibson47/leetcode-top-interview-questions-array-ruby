@@ -186,7 +186,7 @@ end
 
 describe "#is_valid_sudoku" do 
   describe "Example 1" do
-    it "moves zeroes to the end of the array" do 
+    it "says whether board is valid" do 
       board = [
         ["5","3",".",".","7",".",".",".","."],
         ["6",".",".","1","9","5",".",".","."],
@@ -203,7 +203,7 @@ describe "#is_valid_sudoku" do
   end
 
   describe "Example 2" do
-    it "moves zeroes to the end of the array" do 
+    it "says whether board is valid" do 
       board = [
         ["8","3",".",".","7",".",".",".","."],
         ["6",".",".","1","9","5",".",".","."],
