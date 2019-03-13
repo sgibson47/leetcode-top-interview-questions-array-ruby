@@ -138,5 +138,20 @@ describe "#intersect" do
       expect(intersect(nums1, nums2)).to eq([4,9])
     end
   end
-  
+end
+
+describe "#plus_one" do 
+  describe "Example 1" do
+    it "returns an array representing the orig array as an integer +1" do 
+      digits = [1,2,3]
+      expect(intersect(nums1, nums2)).to eq(1,2,4])
+    end
+  end
+
+  describe "Example 2" do
+    it "returns an array representing the orig array as an integer +1" do 
+      digits = [4,3,2,1]
+      expect(intersect(nums1, nums2)).to eq([4,3,2,2])
+    end
+  end
 end
