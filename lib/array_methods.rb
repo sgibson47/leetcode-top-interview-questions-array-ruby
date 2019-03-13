@@ -134,4 +134,26 @@ def move_zeroes(nums)
   nums
 end
 
+def two_sum(nums, target)
+  # create hash map to hold elements from nums & their indices
+  # elem => index
+  elements_and_indices = {}
+
+  # iterate through nums 
+  nums.each_with_index do |num, i|
+    # if the value needed to reach the target is in the hash map
+    # i.e. it appeared earlier in the array
+    if elements_and_indices[target - num]
+      # grab that element's index from the hash map
+      # and return it and the current index
+      return elements_and_indices[target - num], i
+    end
+    # if an element that would add up to the target with the current elem
+    # wasn't in the hash map & so we didn't stop executing the loop when 
+    # with a return statement
+    # add the current index to the hash map at a key of the current value
+    elements_and_indices[num] = i
+  end
+end
+
 
