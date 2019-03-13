@@ -214,8 +214,6 @@ def is_valid_sudoku(board)
     z +=3
   end
 
-
-
   # check boxes
   #     binding.pry
   boxes.each do|box|
