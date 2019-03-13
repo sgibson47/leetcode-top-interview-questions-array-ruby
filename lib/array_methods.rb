@@ -111,6 +111,10 @@ def intersect(nums1, nums2)
   shared
 end
 
-
+def plus_one(digits)
+  integer = digits.join("").to_i
+  integer += 1
+  integer.to_s.split("").map! {|x| x.to_i }
+end
 
 
