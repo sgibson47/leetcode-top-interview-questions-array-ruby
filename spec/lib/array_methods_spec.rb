@@ -171,3 +171,13 @@ describe "#move_zeroes" do
     end
   end
 end
+
+describe "#two_sum" do 
+  describe "Example 1" do
+    it "returns the indices of the 2 elements that add up to the target" do 
+      nums = [2, 7, 11, 15]
+      target = 9
+      expect(two_sum(nums, target)).to eq([0, 1])
+    end
+  end
+end
