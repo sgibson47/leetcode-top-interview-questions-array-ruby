@@ -117,4 +117,13 @@ def plus_one(digits)
   integer.to_s.split("").map! {|x| x.to_i }
 end
 
+def move_zeroes(nums)
+  nums.each_index do |i|
+    if nums[i] == 0
+      zero = nums.slice!(i)
+      nums.push(zero)
+    end
+  end
+end
+
 
