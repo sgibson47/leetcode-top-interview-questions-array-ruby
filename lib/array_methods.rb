@@ -83,5 +83,32 @@ def single_number(nums)
   # nums.reduce { |a, b| a^b }
 end
 
+def intersect(nums1, nums2)
+  if nums1.length < 1 || nums2.length < 1
+    return []
+  end  
+
+  new_nums1 = nums1.sort
+  new_nums2 = nums2.sort
+
+  shared =[]
+  x = 0
+  y = 0
+
+  while !(x >= new_nums1.length || y >= new_nums2.length)
+    nums1_elem = new_nums1[x]
+    nums2_elem = new_nums2[y]
+    if nums1_elem == nums2_elem
+      shared.push(nums1_elem)
+      x += 1
+      y += 1
+    elsif nums1_elem < nums2_elem
+      x +=1
+    else
+      y +=1
+    end
+  end
+  shared
+end
 
 
