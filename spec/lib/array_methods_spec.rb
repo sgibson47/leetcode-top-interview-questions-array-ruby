@@ -163,4 +163,11 @@ describe "#move_zeroes" do
       expect(move_zeroes(nums)).to eq([1,3,12,0,0])
     end
   end
+
+  describe "Example 2" do
+    it "moves zeroes to the end of the array" do 
+      nums = [0,0,1]
+      expect(move_zeroes(nums)).to eq([1,0,0])
+    end
+  end
 end
