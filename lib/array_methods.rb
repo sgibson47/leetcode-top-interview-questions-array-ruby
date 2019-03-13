@@ -156,4 +156,77 @@ def two_sum(nums, target)
   end
 end
 
+def valid_rows?(board)
+ # For each row...
+  board.each do |row|
+     # Get all non-empty cells
+     nums = row.reject { |c| c == "." }
+   
+   # If any of the cells repeat, this is not a valid row.
+     return false if nums.uniq.count != nums.count
+  end 
+  return true
+end
+
+def is_valid_sudoku(board)
+  # check that integers do not repeat
+  # in each row, column, and 3x3 sub-box
+
+  # ¿Grab each row, column & box
+  #  & make it into an array
+  # delete "." (empty squares)
+  # compare condensed_array.length & condensed_array.uniq.length
+
+  # grab & check rows
+  return false unless valid_rows?(board)
+
+  # check columns
+  return false unless valid_rows?(board.transpose)
+
+  # grab boxes
+  boxes = []
+  x = 0
+  y = 1
+  z = 2
+
+  while z <= 8
+    a = 0
+    b = 1
+    c = 2
+    while c <= 8
+      box = []
+      box.push(board[x][a])
+      box.push(board[x][b])
+      box.push(board[x][c])
+      box.push(board[y][a])
+      box.push(board[y][b])
+      box.push(board[y][c])
+      box.push(board[z][a])
+      box.push(board[z][b])
+      box.push(board[z][c])
+      boxes.push(box)
+      a +=3
+      b +=3
+      c +=3
+    end
+    x +=3
+    y +=3
+    z +=3
+  end
+
+
+
+  # check boxes
+  #     binding.pry
+  boxes.each do|box|
+    box.delete(".")
+    if box.length != box.uniq.length && box.length != 0
+      return false
+    end
+  end
+
+
+  # if no return false triggered it's valid
+  true
+end
 
