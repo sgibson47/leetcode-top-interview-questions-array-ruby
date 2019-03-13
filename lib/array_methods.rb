@@ -118,12 +118,20 @@ def plus_one(digits)
 end
 
 def move_zeroes(nums)
+  zeroes = 0
   nums.each_index do |i|
     if nums[i] == 0
-      zero = nums.slice!(i)
-      nums.push(zero)
+      zeroes += 1
     end
   end
+
+  nums.delete(0)
+
+  zeroes.times do 
+    nums.push(0)
+  end
+
+  nums
 end
 
 
