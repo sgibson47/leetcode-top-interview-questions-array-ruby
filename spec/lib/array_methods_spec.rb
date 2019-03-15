@@ -219,3 +219,69 @@ describe "#is_valid_sudoku" do
     end
   end
 end
+
+describe "#rotate" do 
+  describe "Example 1" do
+    it "returns the rotated array" do 
+      array = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+      ]
+      expect(rotate(array)).to eq([
+        [7,4,1],
+        [8,5,2],
+        [9,6,3]
+      ])
+    end
+
+    it "modifies the array passed in" do 
+      array = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+      ]
+      rotate(array)
+
+      expect(array).to eql([
+        [7,4,1],
+        [8,5,2],
+        [9,6,3]
+      ])
+    end
+  end
+  describe "Example 2" do
+    it "returns the rotated array" do 
+      array = [
+        [ 5, 1, 9,11],
+        [ 2, 4, 8,10],
+        [13, 3, 6, 7],
+        [15,14,12,16]
+      ]
+      expect(rotate(array)).to eq([
+        [7,4,1],
+        [8,5,2],
+        [9,6,3]
+      ])
+    end
+
+    it "modifies the array passed in" do 
+      array = [
+        [ 5, 1, 9,11],
+        [ 2, 4, 8,10],
+        [13, 3, 6, 7],
+        [15,14,12,16]
+      ]
+      rotate(array)
+
+      expect(array).to eql([
+        [15,13, 2, 5],
+        [14, 3, 4, 1],
+        [12, 6, 8, 9],
+        [16, 7,10,11]
+      ])
+    end
+  end
+end
+
+
