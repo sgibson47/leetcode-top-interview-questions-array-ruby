@@ -44,7 +44,7 @@ def max_profit(prices)
   profit
 end
 
-def rotate(nums, k)
+def right_rotate(nums, k)
   #however many rotations called for
   k.times do
     #take the last element out of the array
