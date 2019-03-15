@@ -228,3 +228,19 @@ def is_valid_sudoku(board)
   true
 end
 
+def rotate(matrix)
+  #matrix.transpose
+
+  # i = 0
+  # while i <= matrix.length-1
+  #   j = 0
+  #   while j<= matrix.length-1
+  #     matrix[i].push(matrix[j].shift)
+  #     j += 1
+  #   end
+    
+  #   i += 1
+  # end
+  # matrix 
+end
+
