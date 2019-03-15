@@ -229,8 +229,6 @@ def is_valid_sudoku(board)
 end
 
 def rotate(matrix)
-  #matrix.transpose
-
   i = 0
   while i <= matrix.length-1
     j = 0
@@ -243,9 +241,9 @@ def rotate(matrix)
   end
 
   matrix.each do|row|
-    # binding.pry
     row.reverse!
   end
+
   matrix 
 end
 
